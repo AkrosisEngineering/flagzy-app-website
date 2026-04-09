@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flagzy | Flag Guessing Game</title>
+    <meta
+      name="description"
+      content="Flagzy is a single-page game landing site with EN/TR support, privacy pages and app-ads.txt readiness for GitHub Pages."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-title-key="metaTitleHome">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Flagzy home">
+          <img src="logo.png" alt="Flagzy logo" class="brand-logo" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span data-i18n="menuLabel">Menu</span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" data-nav>
+          <a href="#overview" data-i18n="navOverview">Overview</a>
+          <a href="#modes" data-i18n="navModes">Modes</a>
+          <a href="#event" data-i18n="navEvent">Weekly Event</a>
+          <a href="#compliance" data-i18n="navCompliance">Compliance</a>
+          <a href="#faq" data-i18n="navFaq">FAQ</a>
+        </nav>
+
+        <div class="lang-switch" aria-label="Language switcher">
+          <button type="button" data-lang-switch="tr">TR</button>
+          <button type="button" data-lang-switch="en">EN</button>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="section hero" id="overview">
+          <div class="section-copy">
+            <span class="eyebrow" data-i18n="heroEyebrow"
+              >Single-Page Starter for Flagzy</span
+            >
+            <h1 data-i18n="heroTitle">
+              A fast, reveal-based flag guessing game with multiple modes and
+              weekly events.
+            </h1>
+            <p class="hero-text" data-i18n="heroText">
+              This site is prepared as a GitHub Pages-ready landing page for
+              store compliance, app-ads.txt, and product presentation. Copy,
+              screenshots, and final visuals can be replaced later without
+              changing the structure.
+            </p>
+
+            <div class="cta-row">
+              <a class="button button-primary" href="#modes" data-i18n="heroCtaPrimary"
+                >Explore modes</a
+              >
+              <a
+                class="button button-secondary"
+                href="#compliance"
+                data-i18n="heroCtaSecondary"
+                >View compliance</a
+              >
+            </div>
+
+            <div class="hero-stats">
+              <article class="stat-card">
+                <strong>4</strong>
+                <span data-i18n="heroStatModes">Single Player Modes</span>
+              </article>
+              <article class="stat-card">
+                <strong>3</strong>
+                <span data-i18n="heroStatDifficulty">Difficulty Tiers</span>
+              </article>
+              <article class="stat-card">
+                <strong>1</strong>
+                <span data-i18n="heroStatEvent">Weekly Football Event</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="visual-card visual-card-main">
+              <span class="visual-tag" data-i18n="visualTag">Gameplay Preview</span>
+              <div class="mock-phone">
+                <div class="mock-phone-screen">
+                  <div class="mock-header">
+                    <span data-i18n="mockModeLabel">Classic Guess</span>
+                    <span>01</span>
+                  </div>
+                  <div class="flag-placeholder">
+                    <div class="flag-strip strip-a"></div>
+                    <div class="flag-strip strip-b"></div>
+                    <div class="flag-strip strip-c"></div>
+                    <div class="flag-reveal"></div>
+                  </div>
+                  <div class="guess-list">
+                    <span class="guess-chip" data-i18n="mockGuessOne">Guess 1</span>
+                    <span class="guess-chip" data-i18n="mockGuessTwo">Guess 2</span>
+                    <span class="guess-chip" data-i18n="mockGuessThree">Guess 3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="visual-stack">
+              <div class="visual-card">
+                <span class="mini-label" data-i18n="miniLabelSpeed">60-Second Rush</span>
+                <strong data-i18n="miniValueSpeed">Fast rounds, higher score</strong>
+              </div>
+              <div class="visual-card accent-card">
+                <span class="mini-label" data-i18n="miniLabelReveal">Weekly Event</span>
+                <strong data-i18n="miniValueReveal"
+                  >Blurred football legends reveal over time</strong
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section overview-grid">
+          <div class="section-heading">
+            <span class="eyebrow" data-i18n="loopEyebrow">Core loop</span>
+            <h2 data-i18n="loopTitle">Designed around recognition, memory, and timing.</h2>
+            <p data-i18n="loopText">
+              Each mode keeps the same flag-focused DNA while changing how much
+              time, information, and pressure the player receives.
+            </p>
+          </div>
+
+          <div class="flow-grid">
+            <article class="info-card">
+              <span class="step-index">01</span>
+              <h3 data-i18n="stepOneTitle">Study the target</h3>
+              <p data-i18n="stepOneText">
+                The player sees a flag directly, partially, briefly, or in a
+                blurred form depending on the mode.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <span class="step-index">02</span>
+              <h3 data-i18n="stepTwoTitle">Submit country guesses</h3>
+              <p data-i18n="stepTwoText">
+                The system compares the selected country and target flag, then
+                opens matching regions according to overlap and area.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <span class="step-index">03</span>
+              <h3 data-i18n="stepThreeTitle">Race against constraints</h3>
+              <p data-i18n="stepThreeText">
+                Some modes limit guesses, others limit time, and others test
+                memory with very short exposure windows.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <span class="step-index">04</span>
+              <h3 data-i18n="stepFourTitle">Score for speed and precision</h3>
+              <p data-i18n="stepFourText">
+                Faster identification, fewer attempts, and harder difficulties
+                translate into stronger scores.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section modes-section" id="modes">
+          <div class="section-heading">
+            <span class="eyebrow" data-i18n="modesEyebrow">Single player modes</span>
+            <h2 data-i18n="modesTitle">Four modes, one world-scale flag database.</h2>
+            <p data-i18n="modesText">
+              The product foundation is a complete country list and multiple
+              ways to test how players recognize flags under different pressure.
+            </p>
+          </div>
+
+          <div class="mode-grid">
+            <article class="mode-card">
+              <span class="mode-number">01</span>
+              <h3 data-i18n="modeOneTitle">Classic Guess</h3>
+              <p data-i18n="modeOneText">
+                Players can make up to six guesses. Every chosen country reveals
+                part of the target flag based on similarity and shared area.
+              </p>
+              <div class="mode-tags">
+                <span data-i18n="modeOneTagA">6 guesses</span>
+                <span data-i18n="modeOneTagB">region reveal</span>
+              </div>
+            </article>
+
+            <article class="mode-card">
+              <span class="mode-number">02</span>
+              <h3 data-i18n="modeTwoTitle">60-Second Rush</h3>
+              <p data-i18n="modeTwoText">
+                The same reveal logic runs inside a 60-second round. Finding
+                more flags quickly and with fewer attempts produces more points.
+              </p>
+              <div class="mode-tags">
+                <span data-i18n="modeTwoTagA">60 seconds</span>
+                <span data-i18n="modeTwoTagB">combo scoring</span>
+              </div>
+            </article>
+
+            <article class="mode-card">
+              <span class="mode-number">03</span>
+              <h3 data-i18n="modeThreeTitle">Flash Flag</h3>
+              <p data-i18n="modeThreeText">
+                A flag appears for around 400 ms and disappears. Players rely on
+                memory, with three difficulties that shorten the display time.
+              </p>
+              <div class="mode-tags">
+                <span data-i18n="modeThreeTagA">memory test</span>
+                <span data-i18n="modeThreeTagB">3 difficulties</span>
+              </div>
+            </article>
+
+            <article class="mode-card">
+              <span class="mode-number">04</span>
+              <h3 data-i18n="modeFourTitle">Progressive Reveal</h3>
+              <p data-i18n="modeFourText">
+                The flag starts blurred. Harder settings give less time to guess
+                but reward the player with higher score values.
+              </p>
+              <div class="mode-tags">
+                <span data-i18n="modeFourTagA">blur challenge</span>
+                <span data-i18n="modeFourTagB">high risk score</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section event-section" id="event">
+          <div class="event-layout">
+            <div class="section-copy">
+              <span class="eyebrow" data-i18n="eventEyebrow">Featured activity</span>
+              <h2 data-i18n="eventTitle">
+                Weekly football events add a different kind of national trivia.
+              </h2>
+              <p data-i18n="eventText">
+                Famous footballers appear in a blurred image. The blur reduces
+                over time, and the player earns more points by guessing the
+                footballer's country as early as possible.
+              </p>
+              <div class="event-points">
+                <div>
+                  <strong data-i18n="eventPointOneTitle">Blur decreases over time</strong>
+                  <p data-i18n="eventPointOneText">
+                    Recognition becomes easier every second, but the score value
+                    drops as the image sharpens.
+                  </p>
+                </div>
+                <div>
+                  <strong data-i18n="eventPointTwoTitle">Country-based answer loop</strong>
+                  <p data-i18n="eventPointTwoText">
+                    The same national focus connects the event back to the core
+                    identity of the app.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="event-showcase">
+              <div class="player-card">
+                <span class="player-label" data-i18n="playerLabel">Placeholder visual</span>
+                <div class="player-photo"></div>
+                <div class="player-footer">
+                  <span data-i18n="playerFooterOne">Guess nationality fast</span>
+                  <span data-i18n="playerFooterTwo">Higher speed = higher points</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section compliance-section" id="compliance">
+          <div class="section-heading">
+            <span class="eyebrow" data-i18n="complianceEyebrow">Publishing readiness</span>
+            <h2 data-i18n="complianceTitle">Public pages prepared for ads and store setup.</h2>
+            <p data-i18n="complianceText">
+              This starter includes the core public-facing pages commonly needed
+              when configuring AdMob, Google Play Console, and App Store
+              Connect.
+            </p>
+          </div>
+
+          <div class="compliance-grid">
+            <article class="compliance-card">
+              <h3 data-i18n="complianceCardOneTitle">AdMob / app-ads.txt</h3>
+              <p data-i18n="complianceCardOneText">
+                A root-level app-ads.txt file is included with placeholder
+                publisher information so the path is ready to replace.
+              </p>
+              <a href="app-ads.txt" class="inline-link" data-i18n="complianceCardOneLink"
+                >Open app-ads.txt</a
+              >
+            </article>
+
+            <article class="compliance-card">
+              <h3 data-i18n="complianceCardTwoTitle">Google Play Console</h3>
+              <p data-i18n="complianceCardTwoText">
+                Privacy Policy and User Agreement pages are linked and ready to
+                be submitted as public URLs from the Play Console.
+              </p>
+              <a href="privacy.html" class="inline-link" data-i18n="complianceCardTwoLink"
+                >Open Privacy Policy</a
+              >
+            </article>
+
+            <article class="compliance-card">
+              <h3 data-i18n="complianceCardThreeTitle">App Store Connect</h3>
+              <p data-i18n="complianceCardThreeText">
+                Legal copy, support references, and a clear product summary are
+                organized so the site can evolve into a complete app info hub.
+              </p>
+              <a
+                href="user-agreement.html"
+                class="inline-link"
+                data-i18n="complianceCardThreeLink"
+                >Open User Agreement</a
+              >
+            </article>
+          </div>
+        </section>
+
+        <section class="section faq-section" id="faq">
+          <div class="section-heading">
+            <span class="eyebrow" data-i18n="faqEyebrow">Quick FAQ</span>
+          </div>
+
+          <div class="faq-grid">
+            <article class="faq-card">
+              <h3 data-i18n="faqOneTitle">Can this stay as a single-page site?</h3>
+              <p data-i18n="faqOneText">
+                Yes. The main product presentation stays on one page, while the
+                legal documents live as separate public pages.
+              </p>
+            </article>
+
+            <article class="faq-card">
+              <h3 data-i18n="faqTwoTitle">Can screenshots and real assets be added later?</h3>
+              <p data-i18n="faqTwoText">
+                Yes. The current visual blocks are placeholders and can be
+                replaced with real gameplay captures at any time.
+              </p>
+            </article>
+
+            <article class="faq-card">
+              <h3 data-i18n="faqThreeTitle">Is the EN / TR switch shared across pages?</h3>
+              <p data-i18n="faqThreeText">
+                Yes. The selected language is stored locally and reused on the
+                legal pages.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section download-section" id="download">
+          <div class="download-shell">
+            <div class="download-copy">
+              <span class="eyebrow download-eyebrow" data-i18n="downloadEyebrow"
+                >Get the Game</span
+              >
+              <h2 data-i18n="downloadTitle">Ready to Guess Flags Faster?</h2>
+              <p data-i18n="downloadText">
+                Replace the placeholder store links and screenshots, then use
+                this section as the final download block for the published site.
+              </p>
+
+              <ul class="download-points">
+                <li data-i18n="downloadPointOne">Four Single Player Modes</li>
+                <li data-i18n="downloadPointTwo">Weekly Football Event Challenges</li>
+                <li data-i18n="downloadPointThree">Fast Recognition and Score-Based Progress</li>
+              </ul>
+            </div>
+
+            <div class="download-panel">
+              <div class="download-app">
+                <div class="download-app-icon">
+                  <img src="logo.png" alt="Flagzy logo" />
+                </div>
+
+                <div class="download-app-meta">
+                  <strong data-i18n="downloadCardTitle">Flagzy</strong>
+                  <span data-i18n="downloadCardSubtitle"
+                    >Available on the App Store and Google Play</span
+                  >
+                </div>
+              </div>
+
+              <div class="store-badges">
+                <a
+                  href="#"
+                  class="store-badge"
+                  aria-label="Placeholder App Store Link"
+                >
+                  <span class="store-badge-top" data-i18n="downloadAppStoreTop"
+                    >Download on the</span
+                  >
+                  <span class="store-badge-main" data-i18n="downloadAppStoreMain"
+                    >App Store</span
+                  >
+                </a>
+
+                <a
+                  href="#"
+                  class="store-badge store-badge-play"
+                  aria-label="Placeholder Google Play Link"
+                >
+                  <span class="store-badge-top" data-i18n="downloadGooglePlayTop"
+                    >Get it on</span
+                  >
+                  <span class="store-badge-main" data-i18n="downloadGooglePlayMain"
+                    >Google Play</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-links">
+          <a href="privacy.html" data-i18n="footerPrivacy">Privacy Policy</a>
+          <a href="user-agreement.html" data-i18n="footerAgreement">User Agreement</a>
+          <a href="app-ads.txt">app-ads.txt</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
