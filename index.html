@@ -38,7 +38,7 @@
           <a href="#overview" data-i18n="navOverview">Overview</a>
           <a href="#modes" data-i18n="navModes">Modes</a>
           <a href="#event" data-i18n="navEvent">Weekly Event</a>
-          <a href="#compliance" data-i18n="navCompliance">Compliance</a>
+          <a href="#showcase" data-i18n="navCompliance">Screenshots</a>
           <a href="#faq" data-i18n="navFaq">FAQ</a>
         </nav>
 
@@ -71,9 +71,9 @@
               >
               <a
                 class="button button-secondary"
-                href="#compliance"
+                href="#showcase"
                 data-i18n="heroCtaSecondary"
-                >View compliance</a
+                >View screenshots</a
               >
             </div>
 
@@ -88,12 +88,37 @@
               </article>
               <article class="stat-card">
                 <strong>1</strong>
-                <span data-i18n="heroStatEvent">Weekly Football Event</span>
+                <span data-i18n="heroStatEvent">Weekly Challenge</span>
               </article>
             </div>
           </div>
 
           <div class="hero-visual">
+            <div class="hero-store-links">
+              <a
+                href="#"
+                data-store-link="appStore"
+                class="hero-store-link"
+                aria-label="App Store download link"
+              >
+                <img
+                  src="assets/store-badges/app-store-badge.svg"
+                  alt="Download on the App Store"
+                />
+              </a>
+              <a
+                href="#"
+                data-store-link="googlePlay"
+                class="hero-store-link"
+                aria-label="Google Play download link"
+              >
+                <img
+                  src="assets/store-badges/google-play-badge.png"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+
             <div class="visual-card visual-card-main">
               <span class="visual-tag" data-i18n="visualTag">Gameplay Preview</span>
               <div class="mock-phone">
@@ -125,7 +150,7 @@
               <div class="visual-card accent-card">
                 <span class="mini-label" data-i18n="miniLabelReveal">Weekly Event</span>
                 <strong data-i18n="miniValueReveal"
-                  >Blurred football legends reveal over time</strong
+                  >A fresh flag challenge rotates every week</strong
                 >
               </div>
             </div>
@@ -251,26 +276,26 @@
             <div class="section-copy">
               <span class="eyebrow" data-i18n="eventEyebrow">Featured activity</span>
               <h2 data-i18n="eventTitle">
-                Weekly football events add a different kind of national trivia.
+                Weekly challenges keep the experience fresh with new flag-based goals.
               </h2>
               <p data-i18n="eventText">
-                Famous footballers appear in a blurred image. The blur reduces
-                over time, and the player earns more points by guessing the
-                footballer's country as early as possible.
+                A new flag challenge appears every week. Players try to identify
+                the target country as early as possible while the visual becomes
+                easier to read over time.
               </p>
               <div class="event-points">
                 <div>
-                  <strong data-i18n="eventPointOneTitle">Blur decreases over time</strong>
+                  <strong data-i18n="eventPointOneTitle">Reveal Changes Over Time</strong>
                   <p data-i18n="eventPointOneText">
                     Recognition becomes easier every second, but the score value
-                    drops as the image sharpens.
+                    drops as more visual detail is revealed.
                   </p>
                 </div>
                 <div>
-                  <strong data-i18n="eventPointTwoTitle">Country-based answer loop</strong>
+                  <strong data-i18n="eventPointTwoTitle">Flag-Based Weekly Rotation</strong>
                   <p data-i18n="eventPointTwoText">
-                    The same national focus connects the event back to the core
-                    identity of the app.
+                    The weekly format adds variety while staying fully aligned
+                    with the core flag-guessing identity of the app.
                   </p>
                 </div>
               </div>
@@ -281,7 +306,7 @@
                 <span class="player-label" data-i18n="playerLabel">Placeholder visual</span>
                 <div class="player-photo"></div>
                 <div class="player-footer">
-                  <span data-i18n="playerFooterOne">Guess nationality fast</span>
+                  <span data-i18n="playerFooterOne">Guess the flag fast</span>
                   <span data-i18n="playerFooterTwo">Higher speed = higher points</span>
                 </div>
               </div>
@@ -289,53 +314,59 @@
           </div>
         </section>
 
-        <section class="section compliance-section" id="compliance">
+        <section class="section showcase-section" id="showcase">
           <div class="section-heading">
-            <span class="eyebrow" data-i18n="complianceEyebrow">Publishing readiness</span>
-            <h2 data-i18n="complianceTitle">Public pages prepared for ads and store setup.</h2>
+            <span class="eyebrow" data-i18n="complianceEyebrow">Visual Showcase</span>
+            <h2 data-i18n="complianceTitle">A more expressive area for screenshots and app atmosphere.</h2>
             <p data-i18n="complianceText">
-              This starter includes the core public-facing pages commonly needed
-              when configuring AdMob, Google Play Console, and App Store
-              Connect.
+              This section can later be replaced with real gameplay captures,
+              store screenshots, progression visuals, and event highlights.
             </p>
           </div>
 
-          <div class="compliance-grid">
-            <article class="compliance-card">
-              <h3 data-i18n="complianceCardOneTitle">AdMob / app-ads.txt</h3>
-              <p data-i18n="complianceCardOneText">
-                A root-level app-ads.txt file is included with placeholder
-                publisher information so the path is ready to replace.
-              </p>
-              <a href="app-ads.txt" class="inline-link" data-i18n="complianceCardOneLink"
-                >Open app-ads.txt</a
-              >
+          <div class="showcase-grid">
+            <article class="showcase-stage">
+              <div class="iso-scene">
+                <div class="iso-card iso-card-large">
+                  <span class="iso-label" data-i18n="showcaseCardOneLabel">Main Round</span>
+                  <div class="iso-screen iso-screen-flag"></div>
+                </div>
+                <div class="iso-card iso-card-top">
+                  <span class="iso-label" data-i18n="showcaseCardTwoLabel">Flash Flag</span>
+                  <div class="iso-screen iso-screen-flash"></div>
+                </div>
+                <div class="iso-card iso-card-bottom">
+                  <span class="iso-label" data-i18n="showcaseCardThreeLabel">Weekly Challenge</span>
+                  <div class="iso-screen iso-screen-weekly"></div>
+                </div>
+              </div>
             </article>
 
-            <article class="compliance-card">
-              <h3 data-i18n="complianceCardTwoTitle">Google Play Console</h3>
-              <p data-i18n="complianceCardTwoText">
-                Privacy Policy and User Agreement pages are linked and ready to
-                be submitted as public URLs from the Play Console.
-              </p>
-              <a href="privacy.html" class="inline-link" data-i18n="complianceCardTwoLink"
-                >Open Privacy Policy</a
-              >
-            </article>
+            <div class="showcase-copy-grid">
+              <article class="showcase-copy-card">
+                <h3 data-i18n="complianceCardOneTitle">Drop in Real Store Screenshots</h3>
+                <p data-i18n="complianceCardOneText">
+                  Replace these stylized placeholders with actual portrait or
+                  landscape captures from the live product.
+                </p>
+              </article>
 
-            <article class="compliance-card">
-              <h3 data-i18n="complianceCardThreeTitle">App Store Connect</h3>
-              <p data-i18n="complianceCardThreeText">
-                Legal copy, support references, and a clear product summary are
-                organized so the site can evolve into a complete app info hub.
-              </p>
-              <a
-                href="user-agreement.html"
-                class="inline-link"
-                data-i18n="complianceCardThreeLink"
-                >Open User Agreement</a
-              >
-            </article>
+              <article class="showcase-copy-card">
+                <h3 data-i18n="complianceCardTwoTitle">Show Multiple Modes Clearly</h3>
+                <p data-i18n="complianceCardTwoText">
+                  Highlight classic rounds, flash gameplay, progressive reveal,
+                  and weekly challenge content in one visual block.
+                </p>
+              </article>
+
+              <article class="showcase-copy-card">
+                <h3 data-i18n="complianceCardThreeTitle">Make the Page Feel Alive</h3>
+                <p data-i18n="complianceCardThreeText">
+                  Subtle floating motion, perspective cards, and layered light
+                  help the site feel more like a game world than a document.
+                </p>
+              </article>
+            </div>
           </div>
         </section>
 
@@ -385,7 +416,7 @@
 
               <ul class="download-points">
                 <li data-i18n="downloadPointOne">Four Single Player Modes</li>
-                <li data-i18n="downloadPointTwo">Weekly Football Event Challenges</li>
+                <li data-i18n="downloadPointTwo">Weekly Challenge Updates</li>
                 <li data-i18n="downloadPointThree">Fast Recognition and Score-Based Progress</li>
               </ul>
             </div>
@@ -408,27 +439,25 @@
                 <a
                   href="#"
                   class="store-badge"
-                  aria-label="Placeholder App Store Link"
+                  data-store-link="appStore"
+                  aria-label="App Store download link"
                 >
-                  <span class="store-badge-top" data-i18n="downloadAppStoreTop"
-                    >Download on the</span
-                  >
-                  <span class="store-badge-main" data-i18n="downloadAppStoreMain"
-                    >App Store</span
-                  >
+                  <img
+                    src="assets/store-badges/app-store-badge.svg"
+                    alt="Download on the App Store"
+                  />
                 </a>
 
                 <a
                   href="#"
                   class="store-badge store-badge-play"
-                  aria-label="Placeholder Google Play Link"
+                  data-store-link="googlePlay"
+                  aria-label="Google Play download link"
                 >
-                  <span class="store-badge-top" data-i18n="downloadGooglePlayTop"
-                    >Get it on</span
-                  >
-                  <span class="store-badge-main" data-i18n="downloadGooglePlayMain"
-                    >Google Play</span
-                  >
+                  <img
+                    src="assets/store-badges/google-play-badge.png"
+                    alt="Get it on Google Play"
+                  />
                 </a>
               </div>
             </div>
@@ -437,10 +466,10 @@
       </main>
 
       <footer class="site-footer">
+        <p class="footer-copy" data-i18n="footerCopy">2026 Flagzy. All rights reserved.</p>
         <div class="footer-links">
           <a href="privacy.html" data-i18n="footerPrivacy">Privacy Policy</a>
           <a href="user-agreement.html" data-i18n="footerAgreement">User Agreement</a>
-          <a href="app-ads.txt">app-ads.txt</a>
         </div>
       </footer>
     </div>

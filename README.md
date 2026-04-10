@@ -8,6 +8,7 @@ Static GitHub Pages website for the Flagzy mobile game.
 - `privacy.html`: Public privacy policy placeholder page
 - `user-agreement.html`: Public user agreement placeholder page
 - `app-ads.txt`: Root-level AdMob placeholder file
+- `docs/`: Markdown source files for privacy policy and user agreement content
 
 ## Local Preview
 
@@ -30,5 +31,6 @@ Then visit `http://127.0.0.1:8123`.
 
 - Replace placeholder App Store and Google Play links
 - Replace placeholder legal copy in `privacy.html` and `user-agreement.html`
+- Update the markdown files in `docs/` to refresh legal content on the site
 - Update `app-ads.txt` with the real AdMob publisher ID
 - Replace placeholder visuals and screenshots

@@ -1,3 +1,19 @@
+const storeLinks = {
+  appStore: "#",
+  googlePlay: "#"
+};
+
+const legalDocumentMap = {
+  privacy: {
+    en: "docs/privacyEN.md",
+    tr: "docs/privacyTR.md"
+  },
+  agreement: {
+    en: "docs/userEN.md",
+    tr: "docs/userTR.md"
+  }
+};
+
 const translations = {
   tr: {
     metaTitleHome: "Flagzy | Bayrak Tahmin Oyunu",
@@ -6,18 +22,18 @@ const translations = {
     menuLabel: "Menu",
     navOverview: "Genel Bakış",
     navModes: "Modlar",
-    navEvent: "Haftalık Etkinlik",
-    navCompliance: "Yayın Hazırlığı",
+    navEvent: "Haftalık Meydan Okuma",
+    navCompliance: "Ekran Görüntüleri",
     navFaq: "SSS",
     heroEyebrow: "Flagzy İçin Tek Sayfalık Başlangıç Sitesi",
     heroTitle: "Çoklu modları ve haftalık etkinlikleri olan hızlı, görüntü açma temelli bayrak tahmin oyunu.",
     heroText:
       "Bu site GitHub Pages üzerinde yayınlanabilecek şekilde, store uygunluğu, app-ads.txt ve ürün sunumu için hazırlandı. Metinler, ekran görüntüleri ve final görseller daha sonra yapısal değişiklik olmadan yenilenebilir.",
     heroCtaPrimary: "Modları İncele",
-    heroCtaSecondary: "Yayın Hazırlığını Gör",
+    heroCtaSecondary: "Ekran Görsellerini Gör",
     heroStatModes: "Tek Oyunculu Mod",
     heroStatDifficulty: "Zorluk Seviyesi",
-    heroStatEvent: "Haftalık Futbol Etkinliği",
+    heroStatEvent: "Haftalık Meydan Okuma",
     visualTag: "Oynanış Önizlemesi",
     mockModeLabel: "Klasik Tahmin",
     mockGuessOne: "Tahmin 1",
@@ -25,8 +41,8 @@ const translations = {
     mockGuessThree: "Tahmin 3",
     miniLabelSpeed: "60 Saniyelik Tur",
     miniValueSpeed: "Hızlı Turlar, Daha Yüksek Skor",
-    miniLabelReveal: "Haftalık Etkinlik",
-    miniValueReveal: "Bulanık futbol efsaneleri zamanla netleşir",
+    miniLabelReveal: "Haftalık Meydan Okuma",
+    miniValueReveal: "Her hafta yeni bir bayrak görevi oyuncuları bekler",
     loopEyebrow: "Temel Döngü",
     loopTitle: "Tanımaya, hafızaya ve zaman baskısına kurulu tasarım.",
     loopText:
@@ -68,34 +84,37 @@ const translations = {
     modeFourTagA: "blur meydan okuması",
     modeFourTagB: "yüksek risk skoru",
     eventEyebrow: "Öne Çıkan Alan",
-    eventTitle: "Haftalık futbol etkinlikleri ülke bilgisini farklı bir yönden test eder.",
+    eventTitle: "Haftalık meydan okumalar deneyimi yeni bayrak hedefleriyle canlı tutar.",
     eventText:
-      "Ünlü futbolcular bulanık bir görselle gelir. Zamanla blur azalır ve oyuncu futbolcunun ülkesini ne kadar erken bulursa o kadar fazla puan kazanır.",
-    eventPointOneTitle: "Blur Zamanla Azalır",
+      "Her hafta yeni bir bayrak meydan okuması gelir. Görsel zamanla daha okunabilir hale gelir ve oyuncu hedef ülkeyi ne kadar erken bulursa o kadar fazla puan kazanır.",
+    eventPointOneTitle: "Açılım Zamanla Değişir",
     eventPointOneText:
-      "Görsel her saniye daha okunabilir hale gelir, ancak netlik arttıkça alınan puan düşürülür.",
-    eventPointTwoTitle: "Ülke Temelli Cevap Akışı",
+      "Görsel her saniye daha kolay okunur, ancak daha fazla detay açıldıkça puan değeri düşer.",
+    eventPointTwoTitle: "Bayrak Temelli Haftalık Döngü",
     eventPointTwoText:
-      "Etkinlik de uygulamanın temel kimliğini koruyarak ülke odaklı yapıda kalır.",
+      "Haftalık format çeşitlilik katar, ama uygulamanın özündeki bayrak tahmin yapısından kopmaz.",
     playerLabel: "Placeholder görsel",
-    playerFooterOne: "Milliyeti hızlı tahmin et",
+    playerFooterOne: "Bayrağı hızlı tahmin et",
     playerFooterTwo: "Daha yüksek hız = daha yüksek puan",
-    complianceEyebrow: "Yayın Hazırlığı",
-    complianceTitle: "Reklam ve store kurulumu için hazır herkese açık sayfalar.",
+    complianceEyebrow: "Görsel Alan",
+    complianceTitle: "Ekran görüntüleri ve oyun atmosferi için daha karakterli bir vitrin.",
     complianceText:
-      "Bu başlangıç paketi AdMob, Google Play Console ve App Store Connect kurulumlarında sık gereken temel herkese açık sayfaları içerir.",
-    complianceCardOneTitle: "AdMob / app-ads.txt",
+      "Bu alan daha sonra gerçek gameplay görüntüleri, store screenshot setleri, ilerleme sahneleri ve haftalık meydan okuma görselleriyle doldurulabilir.",
+    complianceCardOneTitle: "Gerçek Store Görsellerini Yerleştir",
     complianceCardOneText:
-      "Kök dizinde placeholder yayın bilgisi olan bir app-ads.txt dosyası bulunur; böylece yol hazırdır ve daha sonra gerçek bilgilerle değiştirilebilir.",
+      "Buradaki stilize placeholder kartlar, yayın öncesinde gerçek portre veya yatay ekran görüntüleriyle değiştirilebilir.",
     complianceCardOneLink: "app-ads.txt Aç",
-    complianceCardTwoTitle: "Google Play Console",
+    complianceCardTwoTitle: "Modları Tek Alanda Anlat",
     complianceCardTwoText:
-      "Gizlilik Politikası ve Kullanıcı Sözleşmesi sayfaları açık URL olarak Play Console üzerinden paylaşılmaya hazırdır.",
+      "Klasik tur, flash mod, progressive reveal ve haftalık meydan okumayı tek bir güçlü sahnede gösterebilirsin.",
     complianceCardTwoLink: "Gizlilik Politikasını Aç",
-    complianceCardThreeTitle: "App Store Connect",
+    complianceCardThreeTitle: "Sayfayı Daha Canlı Hissettir",
     complianceCardThreeText:
-      "Yasal metin, destek referansları ve ürün özeti düzenli şekilde ayrıldı; site zamanla tam bir bilgi merkezine dönüşebilir.",
+      "Katmanlı ışık, izometrik yüzeyler ve küçük hareketler sayfayı belge görünümünden çıkarıp oyun havasına yaklaştırır.",
     complianceCardThreeLink: "Kullanıcı Sözleşmesini Aç",
+    showcaseCardOneLabel: "Ana Tur",
+    showcaseCardTwoLabel: "Flash Flag",
+    showcaseCardThreeLabel: "Haftalık Meydan Okuma",
     faqEyebrow: "Hızlı SSS",
     faqOneTitle: "Bu site tek sayfa olarak kalabilir mi?",
     faqOneText:
@@ -111,55 +130,20 @@ const translations = {
     downloadText:
       "Placeholder store linklerini ve ekran görüntülerini güncelledikten sonra bu alanı yayınlanan sitenin final indirme bloğu olarak kullanabilirsin.",
     downloadPointOne: "Dört Tek Oyunculu Mod",
-    downloadPointTwo: "Haftalık Futbol Etkinliği Mücadeleleri",
+    downloadPointTwo: "Haftalık Meydan Okuma Güncellemeleri",
     downloadPointThree: "Hızlı Tanıma ve Skor Odaklı İlerleme",
     downloadCardTitle: "Flagzy",
     downloadCardSubtitle: "App Store ve Google Play üzerinde yayına hazır",
-    downloadAppStoreTop: "Şuradan İndir",
-    downloadAppStoreMain: "App Store",
-    downloadGooglePlayTop: "Şuradan Al",
-    downloadGooglePlayMain: "Google Play",
+    footerCopy: "2026 Flagzy. Tüm hakları saklıdır.",
     footerPrivacy: "Gizlilik Politikası",
     footerAgreement: "Kullanıcı Sözleşmesi",
     legalBackHome: "Ana Sayfaya Dön",
     privacyEyebrow: "Yasal Sayfa",
     privacyTitle: "Gizlilik Politikası",
-    privacyIntro:
-      "Bu sayfa Flagzy için başlangıç niteliğinde bir gizlilik politikası iskeletidir. Oyunu store veya reklam ağlarına göndermeden önce placeholder metinleri nihai hukuki içerikle değiştirin.",
-    privacySectionOneTitle: "1. Toplayabileceğimiz Bilgiler",
-    privacySectionOneText:
-      "Placeholder kategoriler hesap tanımlayıcıları, cihaz verisi, oyun ilerlemesi, crash kayıtları, reklam kimlikleri ve destek mesajlarını içerebilir.",
-    privacySectionTwoTitle: "2. Verileri Nasıl Kullanabiliriz",
-    privacySectionTwoText:
-      "Placeholder kullanım alanları uygulamayı çalıştırma, oynanışı iyileştirme, performans ölçme, kötüye kullanım engelleme, reklam yönetimi ve destek taleplerini cevaplama olabilir.",
-    privacySectionThreeTitle: "3. Üçüncü Taraf Servisler",
-    privacySectionThreeText:
-      "Placeholder üçüncü taraflar analiz, crash raporlama, reklam aracılığı, kimlik doğrulama veya bulut altyapı sağlayıcılarını içerebilir.",
-    privacySectionFourTitle: "4. Saklama, Güvenlik ve Haklar",
-    privacySectionFourText:
-      "Placeholder metin veri saklama süreleri, temel güvenlik önlemleri ve kullanıcıların silme, düzeltme veya erişim talepleri gibi haklarını açıklamalıdır.",
-    privacySectionFiveTitle: "5. İletişim",
-    privacySectionFiveText:
-      "Yayınlamadan önce bu bölüme gerçek destek e-postanızı, şirket adınızı ve gerekli yargı alanı bilgilerini ekleyin.",
     agreementEyebrow: "Yasal Sayfa",
     agreementTitle: "Kullanıcı Sözleşmesi",
-    agreementIntro:
-      "Bu sayfa Flagzy için başlangıç niteliğinde bir kullanıcı sözleşmesidir. Yayınlamadan önce tüm placeholder ifadeleri nihai metninizle değiştirin.",
-    agreementSectionOneTitle: "1. Şartların Kabul Edilmesi",
-    agreementSectionOneText:
-      "Uygulamayı kullanan oyuncunun yayınlanan koşulları, gizlilik uygulamalarını ve gelecekteki güncellemeleri kabul ettiği burada belirtilmelidir.",
-    agreementSectionTwoTitle: "2. Oynanış ve Skorlar",
-    agreementSectionTwoText:
-      "Skorların, etkinliklerin, sıralamaların ve mod dengelerinin zamanla değişebileceği ve adaleti korumak için ayarlanabileceği açıklanabilir.",
-    agreementSectionThreeTitle: "3. Kabul Edilebilir Kullanım",
-    agreementSectionThreeText:
-      "Hile, otomasyon, hesap kötüye kullanım, tersine mühendislik, taciz veya servis kesintisine yol açan davranışlar yasaklı olarak tanımlanabilir.",
-    agreementSectionFourTitle: "4. Fikri Mülkiyet",
-    agreementSectionFourText:
-      "Uygulamanın, marka varlıklarının, oyun sistemlerinin, görsel tasarımın ve korumalı içeriklerin sahipliği bu bölümde netleştirilmelidir.",
-    agreementSectionFiveTitle: "5. Sınırlama ve İletişim",
-    agreementSectionFiveText:
-      "Buraya gerçek şirket bilgileri, uygulanacak hukuk, sorumluluk sınırları ve yasal ya da destek iletişim kanalı eklenmelidir."
+    legalLoading: "Belge yükleniyor...",
+    legalLoadError: "Belge yüklenemedi. Lütfen docs klasöründeki markdown dosyasını kontrol edin."
   },
   en: {
     metaTitleHome: "Flagzy | Flag Guessing Game",
@@ -168,18 +152,18 @@ const translations = {
     menuLabel: "Menu",
     navOverview: "Overview",
     navModes: "Modes",
-    navEvent: "Weekly Event",
-    navCompliance: "Compliance",
+    navEvent: "Weekly Challenge",
+    navCompliance: "Screenshots",
     navFaq: "FAQ",
     heroEyebrow: "Single-Page Starter for Flagzy",
     heroTitle: "A fast, reveal-based flag guessing game with multiple modes and weekly events.",
     heroText:
       "This site is prepared as a GitHub Pages-ready landing page for store compliance, app-ads.txt, and product presentation. Copy, screenshots, and final visuals can be replaced later without changing the structure.",
     heroCtaPrimary: "Explore Modes",
-    heroCtaSecondary: "View Compliance",
+    heroCtaSecondary: "View Screenshots",
     heroStatModes: "Single Player Modes",
     heroStatDifficulty: "Difficulty Tiers",
-    heroStatEvent: "Weekly Football Event",
+    heroStatEvent: "Weekly Challenge",
     visualTag: "Gameplay Preview",
     mockModeLabel: "Classic Guess",
     mockGuessOne: "Guess 1",
@@ -187,8 +171,8 @@ const translations = {
     mockGuessThree: "Guess 3",
     miniLabelSpeed: "60-Second Rush",
     miniValueSpeed: "Fast rounds, higher score",
-    miniLabelReveal: "Weekly Event",
-    miniValueReveal: "Blurred football legends reveal over time",
+    miniLabelReveal: "Weekly Challenge",
+    miniValueReveal: "A fresh flag challenge rotates every week",
     loopEyebrow: "Core loop",
     loopTitle: "Designed around recognition, memory, and timing.",
     loopText:
@@ -230,34 +214,37 @@ const translations = {
     modeFourTagA: "blur challenge",
     modeFourTagB: "high risk score",
     eventEyebrow: "Featured activity",
-    eventTitle: "Weekly football events add a different kind of national trivia.",
+    eventTitle: "Weekly challenges keep the experience fresh with new flag-based goals.",
     eventText:
-      "Famous footballers appear in a blurred image. The blur reduces over time, and the player earns more points by guessing the footballer's country as early as possible.",
-    eventPointOneTitle: "Blur decreases over time",
+      "A new flag challenge appears every week. Players try to identify the target country as early as possible while the visual becomes easier to read over time.",
+    eventPointOneTitle: "Reveal Changes Over Time",
     eventPointOneText:
-      "Recognition becomes easier every second, but the score value drops as the image sharpens.",
-    eventPointTwoTitle: "Country-based answer loop",
+      "Recognition becomes easier every second, but the score value drops as more visual detail is revealed.",
+    eventPointTwoTitle: "Flag-Based Weekly Rotation",
     eventPointTwoText:
-      "The same national focus connects the event back to the core identity of the app.",
+      "The weekly format adds variety while staying fully aligned with the core flag-guessing identity of the app.",
     playerLabel: "Placeholder visual",
-    playerFooterOne: "Guess nationality fast",
+    playerFooterOne: "Guess the flag fast",
     playerFooterTwo: "Higher speed = higher points",
-    complianceEyebrow: "Publishing readiness",
-    complianceTitle: "Public pages prepared for ads and store setup.",
+    complianceEyebrow: "Visual Showcase",
+    complianceTitle: "A more expressive area for screenshots and app atmosphere.",
     complianceText:
-      "This starter includes the core public-facing pages commonly needed when configuring AdMob, Google Play Console, and App Store Connect.",
-    complianceCardOneTitle: "AdMob / app-ads.txt",
+      "This section can later be replaced with real gameplay captures, store screenshots, progression visuals, and event highlights.",
+    complianceCardOneTitle: "Drop in Real Store Screenshots",
     complianceCardOneText:
-      "A root-level app-ads.txt file is included with placeholder publisher information so the path is ready to replace.",
+      "Replace these stylized placeholders with actual portrait or landscape captures from the live product.",
     complianceCardOneLink: "Open app-ads.txt",
-    complianceCardTwoTitle: "Google Play Console",
+    complianceCardTwoTitle: "Show Multiple Modes Clearly",
     complianceCardTwoText:
-      "Privacy Policy and User Agreement pages are linked and ready to be submitted as public URLs from the Play Console.",
+      "Highlight classic rounds, flash gameplay, progressive reveal, and weekly challenge content in one visual block.",
     complianceCardTwoLink: "Open Privacy Policy",
-    complianceCardThreeTitle: "App Store Connect",
+    complianceCardThreeTitle: "Make the Page Feel Alive",
     complianceCardThreeText:
-      "Legal copy, support references, and a clear product summary are organized so the site can evolve into a complete app info hub.",
+      "Subtle floating motion, perspective cards, and layered light help the site feel more like a game world than a document.",
     complianceCardThreeLink: "Open User Agreement",
+    showcaseCardOneLabel: "Main Round",
+    showcaseCardTwoLabel: "Flash Flag",
+    showcaseCardThreeLabel: "Weekly Challenge",
     faqEyebrow: "Quick FAQ",
     faqOneTitle: "Can this stay as a single-page site?",
     faqOneText:
@@ -273,55 +260,20 @@ const translations = {
     downloadText:
       "Replace the placeholder store links and screenshots, then use this section as the final download block for the published site.",
     downloadPointOne: "Four Single Player Modes",
-    downloadPointTwo: "Weekly Football Event Challenges",
+    downloadPointTwo: "Weekly Challenge Updates",
     downloadPointThree: "Fast Recognition and Score-Based Progress",
     downloadCardTitle: "Flagzy",
     downloadCardSubtitle: "Available on the App Store and Google Play",
-    downloadAppStoreTop: "Download on the",
-    downloadAppStoreMain: "App Store",
-    downloadGooglePlayTop: "Get it on",
-    downloadGooglePlayMain: "Google Play",
+    footerCopy: "2026 Flagzy. All rights reserved.",
     footerPrivacy: "Privacy Policy",
     footerAgreement: "User Agreement",
     legalBackHome: "Back to home",
     privacyEyebrow: "Legal page",
     privacyTitle: "Privacy Policy",
-    privacyIntro:
-      "This is a starter privacy policy structure for Flagzy. Replace the placeholder text with the final legal wording before submitting the game to stores or ad networks.",
-    privacySectionOneTitle: "1. Information We May Collect",
-    privacySectionOneText:
-      "Placeholder categories may include account identifiers, device data, gameplay progress, crash diagnostics, advertising identifiers, and support messages.",
-    privacySectionTwoTitle: "2. How We Use Data",
-    privacySectionTwoText:
-      "Placeholder usage may include operating the app, improving gameplay, measuring performance, preventing abuse, managing ads, and responding to support requests.",
-    privacySectionThreeTitle: "3. Third-Party Services",
-    privacySectionThreeText:
-      "Placeholder third parties may include analytics, crash reporting, ad mediation, authentication, or cloud infrastructure providers.",
-    privacySectionFourTitle: "4. Retention, Security, and Rights",
-    privacySectionFourText:
-      "Placeholder policy text should explain retention periods, basic security practices, and any rights users have to request deletion, correction, or access.",
-    privacySectionFiveTitle: "5. Contact",
-    privacySectionFiveText:
-      "Add your real support email, business name, and jurisdiction details here before publishing the final version.",
     agreementEyebrow: "Legal page",
     agreementTitle: "User Agreement",
-    agreementIntro:
-      "This is a starter agreement page for Flagzy. Replace every placeholder statement with your final terms before publishing.",
-    agreementSectionOneTitle: "1. Acceptance of Terms",
-    agreementSectionOneText:
-      "State that using the app means the player accepts the published terms, privacy practices, and future updates to the agreement.",
-    agreementSectionTwoTitle: "2. Gameplay and Scores",
-    agreementSectionTwoText:
-      "Explain that scores, events, rankings, and mode balancing may change over time and can be adjusted to preserve fairness.",
-    agreementSectionThreeTitle: "3. Acceptable Use",
-    agreementSectionThreeText:
-      "Describe prohibited behavior such as cheating, automation, account abuse, reverse engineering, harassment, or service disruption.",
-    agreementSectionFourTitle: "4. Intellectual Property",
-    agreementSectionFourText:
-      "Clarify ownership of the app, brand assets, game systems, visual design, and any protected content used inside the service.",
-    agreementSectionFiveTitle: "5. Limitation and Contact",
-    agreementSectionFiveText:
-      "Add your real company details, governing law, disclaimers, and a contact method for legal or support inquiries."
+    legalLoading: "Loading document...",
+    legalLoadError: "Document could not be loaded. Please check the markdown file in the docs folder."
   }
 };
 
@@ -330,6 +282,126 @@ const languageButtons = document.querySelectorAll("[data-lang-switch]");
 const translatableNodes = document.querySelectorAll("[data-i18n]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
+const legalDocumentContainer = document.querySelector("[data-legal-doc]");
+
+const applyStoreLinks = () => {
+  document.querySelectorAll("[data-store-link]").forEach((link) => {
+    const storeKey = link.dataset.storeLink;
+    if (storeLinks[storeKey]) {
+      link.href = storeLinks[storeKey];
+    }
+  });
+};
+
+const parseInlineMarkdown = (text) =>
+  text
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*([^*]+)\*/g, "<em>$1</em>")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+
+const renderMarkdown = (markdown) => {
+  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+  const html = [];
+  const paragraphBuffer = [];
+  let activeList = null;
+
+  const flushParagraph = () => {
+    if (!paragraphBuffer.length) {
+      return;
+    }
+
+    html.push(`<p>${parseInlineMarkdown(paragraphBuffer.join(" "))}</p>`);
+    paragraphBuffer.length = 0;
+  };
+
+  const closeList = () => {
+    if (activeList) {
+      html.push(`</${activeList}>`);
+      activeList = null;
+    }
+  };
+
+  lines.forEach((rawLine) => {
+    const line = rawLine.trim();
+
+    if (!line) {
+      flushParagraph();
+      closeList();
+      return;
+    }
+
+    const headingMatch = line.match(/^(#{1,4})\s+(.*)$/);
+    if (headingMatch) {
+      flushParagraph();
+      closeList();
+      const level = Math.min(headingMatch[1].length, 4);
+      html.push(`<h${level}>${parseInlineMarkdown(headingMatch[2])}</h${level}>`);
+      return;
+    }
+
+    const bulletMatch = line.match(/^[-*]\s+(.*)$/);
+    if (bulletMatch) {
+      flushParagraph();
+      if (activeList !== "ul") {
+        closeList();
+        activeList = "ul";
+        html.push("<ul>");
+      }
+      html.push(`<li>${parseInlineMarkdown(bulletMatch[1])}</li>`);
+      return;
+    }
+
+    const orderedMatch = line.match(/^\d+\.\s+(.*)$/);
+    if (orderedMatch) {
+      flushParagraph();
+      if (activeList !== "ol") {
+        closeList();
+        activeList = "ol";
+        html.push("<ol>");
+      }
+      html.push(`<li>${parseInlineMarkdown(orderedMatch[1])}</li>`);
+      return;
+    }
+
+    paragraphBuffer.push(line);
+  });
+
+  flushParagraph();
+  closeList();
+
+  return html.join("\n");
+};
+
+const loadLegalDocument = async (language) => {
+  if (!legalDocumentContainer) {
+    return;
+  }
+
+  const docType = legalDocumentContainer.dataset.legalDoc;
+  const docPath = legalDocumentMap[docType]?.[language] || legalDocumentMap[docType]?.en;
+  const dictionary = translations[language] || translations.en;
+
+  if (!docPath) {
+    legalDocumentContainer.innerHTML = `<p>${dictionary.legalLoadError}</p>`;
+    return;
+  }
+
+  legalDocumentContainer.innerHTML = `<p>${dictionary.legalLoading}</p>`;
+
+  try {
+    const response = await fetch(docPath, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`Failed to load ${docPath}`);
+    }
+
+    const markdown = await response.text();
+    legalDocumentContainer.innerHTML = renderMarkdown(markdown);
+  } catch (error) {
+    legalDocumentContainer.innerHTML = `<p>${dictionary.legalLoadError}</p>`;
+    console.error(error);
+  }
+};
 
 const applyLanguage = (language) => {
   const selected = translations[language] ? language : "en";
@@ -353,9 +425,11 @@ const applyLanguage = (language) => {
   });
 
   window.localStorage.setItem("flagzy-language", selected);
+  loadLegalDocument(selected);
 };
 
 const initialLanguage = window.localStorage.getItem("flagzy-language") || "en";
+applyStoreLinks();
 applyLanguage(initialLanguage);
 
 languageButtons.forEach((button) => {
