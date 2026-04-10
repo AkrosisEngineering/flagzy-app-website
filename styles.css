@@ -15,6 +15,7 @@
   --radius-lg: 24px;
   --radius-md: 18px;
   --header-height: 92px;
+  --store-badge-height: 56px;
 }
 
 * {
@@ -27,9 +28,9 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
   font-family: "Manrope", sans-serif;
   color: var(--text);
+  overflow-x: hidden;
   background:
     radial-gradient(circle at top left, rgba(96, 165, 250, 0.16), transparent 26%),
     radial-gradient(circle at 85% 12%, rgba(255, 122, 24, 0.16), transparent 24%),
@@ -328,6 +329,7 @@ p {
 .hero-store-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 14px;
   margin-top: 4px;
   margin-bottom: 6px;
@@ -337,31 +339,25 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 224px;
-  height: 76px;
-  padding: 8px 12px;
-  overflow: hidden;
-  border-radius: 20px;
-  background: rgba(8, 14, 26, 0.7);
-  border: 1px solid rgba(148, 163, 184, 0.14);
-  box-shadow: 0 16px 34px rgba(2, 6, 23, 0.24);
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
   transition:
     transform 180ms ease,
-    box-shadow 180ms ease,
-    background-color 180ms ease;
+    opacity 180ms ease;
 }
 
 .hero-store-link:hover,
 .hero-store-link:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 20px 36px rgba(2, 6, 23, 0.32);
-  background: rgba(12, 19, 34, 0.92);
+  opacity: 0.92;
 }
 
 .hero-store-link img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: var(--store-badge-height);
   object-fit: contain;
 }
 
@@ -732,6 +728,7 @@ p {
 .store-badges {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 16px;
 }
 
@@ -739,37 +736,26 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 224px;
-  height: 76px;
-  padding: 8px 12px;
-  overflow: hidden;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.18);
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
   transition:
     transform 180ms ease,
-    box-shadow 180ms ease,
-    border-color 180ms ease;
+    opacity 180ms ease;
 }
 
 .store-badge:hover,
 .store-badge:focus-visible {
   transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.24);
-  box-shadow: 0 24px 38px rgba(0, 0, 0, 0.34);
+  opacity: 0.92;
 }
 
 .store-badge img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: var(--store-badge-height);
   object-fit: contain;
-}
-
-[data-store-link="googlePlay"] img {
-  transform: scale(1.12);
-  transform-origin: center;
 }
 
 .info-card,
@@ -1148,21 +1134,21 @@ p {
   }
 
   .iso-card-large {
-    inset: 72px 84px 24px 14px;
+    inset: 72px 72px 24px 14px;
   }
 
   .iso-card-top {
-    width: 186px;
+    width: min(186px, 48vw);
     height: 146px;
   }
 
   .iso-card-bottom {
-    width: 210px;
+    width: min(210px, 54vw);
     height: 162px;
   }
 
   .hero-store-links {
-    justify-content: stretch;
+    justify-content: flex-start;
   }
 
   .download-app {
@@ -1185,14 +1171,13 @@ p {
 
   .hero-store-link,
   .store-badge {
-    min-width: 0;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
   }
 
   .store-badge img,
   .hero-store-link img {
     max-width: 100%;
-    height: auto;
   }
 
   .site-footer {
@@ -1206,10 +1191,55 @@ p {
 }
 
 @media (max-width: 560px) {
+  :root {
+    --store-badge-height: 48px;
+  }
+
   .site-header,
   .legal-header {
     position: static;
     margin-top: 10px;
+  }
+
+  .hero-store-links,
+  .store-badges {
+    gap: 12px;
+  }
+
+  .hero-store-links {
+    justify-content: flex-start;
+  }
+
+  .showcase-stage {
+    min-height: 360px;
+    padding: 18px;
+  }
+
+  .iso-scene {
+    min-height: 300px;
+  }
+
+  .iso-card {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .iso-card-large {
+    inset: 66px 54px 18px 8px;
+  }
+
+  .iso-card-top {
+    top: 10px;
+    right: 4px;
+    width: min(150px, 46vw);
+    height: 116px;
+  }
+
+  .iso-card-bottom {
+    right: 14px;
+    bottom: 14px;
+    width: min(168px, 52vw);
+    height: 128px;
   }
 
   .menu-toggle,
